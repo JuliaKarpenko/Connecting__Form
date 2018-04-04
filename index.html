@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Connecting form</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">Залишити заявку</div>
+		<form class="form" id="form1">
+			<div class="form__group">
+				<input class="input" id="username" type="text" pattern="[^0-9]+$" required>
+				<label class="label" for="username">
+					<span class="content">*Ім'я та Прізвище</span>
+				</label>		
+			</div>
+			<div class="form__group">
+				<input class="input" id="phone" type="text" pattern="^[0-9]+$">
+				<label class="label" for="phone">
+					<span class="content">*Телефон</span>
+				</label>
+			</div>
+			<div class="form__group">
+				<input class="input" id="email" type="email" >
+				<label class="label" for="email">
+					<span class="content">*Email</span>
+				</label>	
+			</div>
+			<div class="form__group">
+				<input class="input" id="company" type="text" pattern="^[[A-Za-zА-Яа-яЁё\s]+$">
+				<label class="label" for="company">
+					<span class="content">*Компанія</span>
+				</label>	
+			</div>
+			
+		</form>	
+		<div class="buttons">
+			<button class="cancel">відмінити</button>
+			<button id="agree" class="agree" form="form1" >залишити</button>
+		</div>
+	</div>
+	<div class="hidden">
+		<p class="hidden__text">Вашу заявку прийнято</p>
+	</div>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
